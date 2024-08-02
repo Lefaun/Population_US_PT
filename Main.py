@@ -195,6 +195,12 @@ with col[0]:
 with col[1]:
     st.markdown('#### Total Population')
     
+    df = pd.DataFrame(
+    np.random.randn(1000, 2) / [39.3, -7.51],
+    columns=['lat', 'lon'])
+
+    st.map(df)
+    
     choropleth = make_choropleth(df_selected_year, 'states_code', 'population', selected_color_theme)
     st.plotly_chart(choropleth, use_container_width=True)
     
@@ -202,7 +208,7 @@ with col[1]:
     st.altair_chart(heatmap, use_container_width=True)
 
     df = pd.DataFrame(
-    np.random.randn(1000, 2) / [50, 50] + [39.3, -7.51],
+    np.random.randn(1000, 2) / [39.3, -7.51],
     columns=['lat', 'lon'])
 
     st.map(df)
