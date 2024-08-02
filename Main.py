@@ -333,7 +333,7 @@ with col[1]:
             #st.write(f"Desvio Padrão da População: {std_dev}")
             #st.write(f"Variância da População: {variance}")
     
-        Atualizar gráficos
+        #Atualizar gráficos
         df = pd.DataFrame({
             "Tempo": time_data,
             "População": population_data,
