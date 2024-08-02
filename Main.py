@@ -199,8 +199,8 @@ with col[1]:
     columns=['lat', 'lon'])
 
     st.map(df)
-    data = [39.3,-7.51]
-    st.map( data, latitude=39.3, longitude=-7.51, size=None, zoom=None, use_container_width=True)
+    data = {'Lat': 39.3,'Long': -7.51}
+    st.map(data)
     
     choropleth = make_choropleth(df_selected_year, 'states_code', 'population', selected_color_theme)
     st.plotly_chart(choropleth, use_container_width=True)
