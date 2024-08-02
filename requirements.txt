@@ -2,3 +2,8 @@ streamlit
 pandas
 altair
 plotly
+numpy
+scipy
+matplotlib
+seaborn
+statsmodels
