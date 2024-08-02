@@ -214,8 +214,8 @@ with col[0]:
         #donut_chart_less = make_donut(deaths_data, 'Deaths', 'red')
         donut_chart_less = make_donut(states_migration_less, 'Deaths', 'red')
     else:
-        states_migration_greater = 0
-        states_migration_less = 0
+        #states_migration_greater = 0
+        #states_migration_less = 0
         #donut_chart_greater = make_donut(births_data, 'Births', 'green')
         donut_chart_greater = make_donut(states_migration_greater, 'Births', 'green')
         #donut_chart_less = make_donut(deaths_data, 'Deaths', 'red')
