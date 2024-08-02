@@ -193,12 +193,6 @@ with col[0]:
         st.altair_chart(donut_chart_less)
 
 with col[1]:
-    st.markdown('#### Total População')
-    df = pd.DataFrame(
-    np.random.randn(1000, 2) / [50, 50] + [39.22, -7.51],
-    columns=['lat', 'lon'])
-
-    st.map(df)
     data = pd.DataFrame({
     'awesome cities' : ['Portugal','Algarve','Guimarães','Coimbra'],
     'lat' : [38.44,37.01,41.44,40.21],
