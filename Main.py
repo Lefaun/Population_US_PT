@@ -361,7 +361,7 @@ def perform_regression(time, population):
     return model
 
 # Configuração da interface do Streamlit
-st.set_page_config(page_title="Simulação de População em Tempo Real", layout="wide")
+#st.set_page_config(page_title="Simulação de População em Tempo Real", layout="wide")
 st.title("Simulação de População com Atualizações ao Vivo")
 
 initial_population = st.number_input("População Inicial", value=1000, min_value=1)
