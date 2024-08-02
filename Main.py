@@ -202,7 +202,7 @@ with col[1]:
     data = pd.DataFrame({
     'awesome cities' : ['Portugal'],
     'lat' : [39.22],
-    'lon' : [, -7.51]
+    'lon' : [ -7.51]
 })
     st.map(data)
     
