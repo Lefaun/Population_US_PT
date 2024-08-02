@@ -310,11 +310,6 @@ with col[1]:
     #death_rate = st.slider("Taxa de Mortalidade (por segundo)", 0.0, 5.0, 0.5)
     #seconds = st.number_input("Duração da Simulação (segundos)", value=100, min_value=1)
     
-    if st.button("Iniciar Simulação"):
-        time_data = []
-        population_data = []
-        births_data = []
-        deaths_data = []
     
         population = initial_population
         
@@ -326,7 +321,7 @@ with col[1]:
             #births_data.append(births)
             #deaths_data.append(deaths)
     
-        mean,  std_dev, variance = compute_statistics(population_data)
+         mean,  std_dev, variance = compute_statistics(population_data)
             
             #st.write(f"Tempo: {second + 1}s")
             #st.write(f"População Atual: {population}")
