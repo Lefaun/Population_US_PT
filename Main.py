@@ -426,4 +426,4 @@ if st.button("Iniciar Simulação"):
     
     st.markdown("### Regressão Linear da População")
     df['Previsão'] = model.predict(sm.add_constant(time_data))
-    st.line_chart(df[['Tempo', 'População', 'Previsão']].set_index('Tempo')
+    st.line_chart(df[['Tempo', 'População', 'Previsão']].set_index('Tempo'))
