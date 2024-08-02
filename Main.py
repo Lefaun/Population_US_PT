@@ -8,11 +8,6 @@ import urllib.request
 #######################
 # Page configuration
 
-import numpy as np
-import json
-import plotly.graph_objs as go
-from plotly.offline import download_plotlyjs, init_notebook_mode,  iplotinit_notebook_mode(connected=True)
-
 
 st.set_page_config(
     page_title="Portugal Population Dashboard",
