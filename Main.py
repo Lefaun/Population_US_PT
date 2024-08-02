@@ -13,42 +13,7 @@ import json
 import plotly.graph_objs as go
 from plotly.offline import download_plotlyjs, init_notebook_mode,  iplotinit_notebook_mode(connected=True)
 
-Portugal_url = 'https://github.com/codeforgermany/click_that_hood/blob/main/public/data/portugal.geojson'
 
-
-def read_geojson(url):
-    with urllib.request.urlopen(url) as url:
-        jdata = json.loads(url.read().decode())
-    return jdata 
-
-jdata = read_geojson(Portugal_url)
-jdata['type']
-
-fig= go.Figure(go.Choroplethmapbox(z=z,
-                            locations=locations,
-                            colorscale='reds',
-                            colorbar=dict(thickness=20, ticklen=3),
-                            geojson=jdata,
-                            text=text,
-                            hoverinfo='all',
-                            marker_line_width=1, marker_opacity=0.75))
-                            
-                            
-fig.update_layout(title_text= 'Choroplethmapbox',
-                  title_x=0.5, width = 700,# height=700,
-                  mapbox = dict(center= dict(lat=36.913818,  lon=106.363625),
-                                 accesstoken= mapboxt,
-                                 style='basic',
-                                 zoom=2.35,
-                               ));
-
-fig.show()
-
-fig.data[0].hovertemplate =  '<b>Province</b>: <b>%{text}</b>'+\
-                              '<br> <b>Val </b>: %{z}<br>'
-fig.update_layout(title_text= "Choroplethmapbox with hovertemplate");
-iplot(fig)
-    
 st.set_page_config(
     page_title="Portugal Population Dashboard",
     page_icon="🏂",
@@ -240,6 +205,12 @@ with col[1]:
     
     heatmap = make_heatmap(df_reshaped, 'year', 'states', 'population', selected_color_theme)
     st.altair_chart(heatmap, use_container_width=True)
+
+    df = pd.DataFrame(
+    np.random.randn(1000, 2) / [50, 50] + [39.3, -7.51],
+    columns=['lat', 'lon'])
+
+    st.map(df)
     
 
 with col[2]:
