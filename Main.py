@@ -209,18 +209,22 @@ with col[0]:
         states_migration_less = round((len(df_less_50000)/df_population_difference_sorted.states.nunique())*100)
         donut_chart_greater = make_donut(births, 'Births', 'green')
         #donut_chart_greater = make_donut(states_migration_greater, 'Inbound Migration', 'green')
-        donut_chart_less = make_donut(states_migration_less, 'Outbound Migration', 'red')
+        donut_chart_less = make_donut(deaths, 'Deaths', 'red')
+        #donut_chart_less = make_donut(states_migration_less, 'Outbound Migration', 'red')
     else:
         states_migration_greater = 0
         states_migration_less = 0
-        donut_chart_greater = make_donut(states_migration_greater, 'Inbound Migration', 'green')
-        donut_chart_less = make_donut(states_migration_less, 'Outbound Migration', 'red')
+        donut_chart_greater = make_donut(births, 'Births', 'green')
+        #donut_chart_greater = make_donut(states_migration_greater, 'Inbound Migration', 'green')
+        donut_chart_less = make_donut(deaths, 'Deaths', 'red')
+        #donut_chart_greater = make_donut(states_migration_greater, 'Inbound Migration', 'green')
+        #donut_chart_less = make_donut(states_migration_less, 'Outbound Migration', 'red')
 
     migrations_col = st.columns((0.2, 1, 0.2))
     with migrations_col[1]:
-        st.write('Inbound')
+        st.write('Births')
         st.altair_chart(donut_chart_greater)
-        st.write('Outbound')
+        st.write('Deaths')
         st.altair_chart(donut_chart_less)
 
 with col[1]:
@@ -306,7 +310,7 @@ with col[1]:
     #death_rate = st.slider("Taxa de Mortalidade (por segundo)", 0.0, 5.0, 0.5)
     #seconds = st.number_input("Duração da Simulação (segundos)", value=100, min_value=1)
     
-    #if st.button("Iniciar Simulação"):
+    if st.button("Iniciar Simulação"):
         time_data = []
         population_data = []
         births_data = []
