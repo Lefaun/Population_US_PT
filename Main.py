@@ -195,8 +195,8 @@ with col[0]:
 with col[1]:
     st.markdown('#### Total População')
     df = pd.DataFrame(
-    np.random.randn([50, 50] + [39.3, -7.51],
-    columns=['lat', 'lon']))
+    np.random.randn((100/2)/[50, 50] + [39.3, -7.51],
+    columns=['lat', 'lon'])
 
     st.map(df)
     
