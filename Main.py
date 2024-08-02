@@ -200,9 +200,9 @@ with col[1]:
 
     st.map(df)
     data = pd.DataFrame({
-    'awesome cities' : ['Portugal'],
-    'lat' : [39.22],
-    'lon' : [ -7.51]
+    'awesome cities' : ['Portugal','Algarve','Guimarães','Coimbra'],
+    'lat' : [38.44,37.01,41.44,40.21],
+    'lon' : [ -9.8,-7.9,-8.29,-8.22]
 })
     st.map(data)
     
