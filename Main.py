@@ -7,7 +7,7 @@ import plotly.express as px
 import urllib.request
 #######################
 # Page configuration
-
+import numpy as np
 
 st.set_page_config(
     page_title="Portugal Population Dashboard",
