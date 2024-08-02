@@ -207,7 +207,8 @@ with col[0]:
         # % of States with population difference > 50000
         states_migration_greater = round((len(df_greater_50000)/df_population_difference_sorted.states.nunique())*100)
         states_migration_less = round((len(df_less_50000)/df_population_difference_sorted.states.nunique())*100)
-        donut_chart_greater = make_donut(states_migration_greater, 'Inbound Migration', 'green')
+        donut_chart_greater = make_donut(births, 'Births', 'green')
+        #donut_chart_greater = make_donut(states_migration_greater, 'Inbound Migration', 'green')
         donut_chart_less = make_donut(states_migration_less, 'Outbound Migration', 'red')
     else:
         states_migration_greater = 0
