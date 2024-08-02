@@ -205,6 +205,8 @@ with col[0]:
         df_less_50000 = df_population_difference_sorted[df_population_difference_sorted.population_difference < -50000]
         
         # KPIs
+
+        population = initial_population
         kpi1, kpi2, kpi3 = st.columns(3)
         kpi1.metric(label="População Atual", value=int(population))
         kpi2.metric(label="Nascimentos no último segundo", value=int(births))
