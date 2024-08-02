@@ -195,7 +195,7 @@ with col[0]:
 with col[1]:
     st.markdown('#### Total Population')
     
-    df = pd.DataFrame( np.random.randn([39.3, -7.51]), columns=['lat', 'lon'])
+    np.random.randn(100, 2) / [50, 50] + [39.3, -7.51],
 
     st.map(df)
     
@@ -205,11 +205,7 @@ with col[1]:
     heatmap = make_heatmap(df_reshaped, 'year', 'states', 'population', selected_color_theme)
     st.altair_chart(heatmap, use_container_width=True)
 
-    df = pd.DataFrame(
-    np.random.randn(1000, 2) / [39.3, -7.51],
-    columns=['lat', 'lon'])
-
-    st.map(df)
+    
     
 
 with col[2]:
