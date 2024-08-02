@@ -199,7 +199,12 @@ with col[1]:
     columns=['lat', 'lon'])
 
     st.map(df)
-    
+    data = pd.DataFrame({
+    'awesome cities' : ['Portugal'],
+    'lat' : [39.22],
+    'lon' : [, -7.51]
+})
+    st.map(data)
     
     choropleth = make_choropleth(df_selected_year, 'states_code', 'population', selected_color_theme)
     st.plotly_chart(choropleth, use_container_width=True)
