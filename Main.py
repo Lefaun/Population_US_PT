@@ -205,7 +205,23 @@ with col[0]:
         df_less_50000 = df_population_difference_sorted[df_population_difference_sorted.population_difference < -50000]
         
         # KPIs
-
+        time_data = []
+        population_data = []
+        births_data = []
+        deaths_data = []
+    
+        population = initial_population
+        
+        placeholder = st.empty()
+    
+        for second in range(seconds):
+            population, births, deaths = simulate_population_step(population, birth_rate, death_rate)
+            
+            time_data.append(second)
+            population_data.append(population)
+            births_data.append(births)
+            deaths_data.append(deaths)
+        
         population = initial_population
         kpi1, kpi2, kpi3 = st.columns(3)
         kpi1.metric(label="População Atual", value=int(population))
