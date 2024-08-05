@@ -302,6 +302,7 @@ with col[1]:
                 st.write(f"Média da População: {mean}")
                 st.write(f"Desvio Padrão da População: {std_dev}")
                 st.write(f"Variância da População: {variance}")
+                st.write(f"Total de Nascimento: {sum}")
     
             time.sleep(1)  # Esperar um segundo antes de atualizar novamente
     
