@@ -254,6 +254,7 @@ with col[1]:
         population_data = []
         births_data = []
         deaths_data = []
+        births_d = sum(births_data)
     
         population = initial_population
         
@@ -266,6 +267,7 @@ with col[1]:
             population_data.append(population)
             births_data.append(births)
             deaths_data.append(deaths)
+            births_d.append(births_data)
     
             mean, std_dev, variance = compute_statistics(population_data)
             
@@ -275,7 +277,7 @@ with col[1]:
                 kpi1.metric(label="População Atual", value=int(population))
                 kpi2.metric(label="Nascimentos no último segundo", value=int(births))
                 kpi3.metric(label="Mortes no último segundo", value=int(deaths))
-                kpi4.metric(label="Total Nacimentos", value=int(births_data))
+                kpi4.metric(label="Total Nacimentos", value=int(births_d))
     
                 # Dados em DataFrame
                 df = pd.DataFrame({
