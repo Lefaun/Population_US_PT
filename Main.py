@@ -267,7 +267,7 @@ with col[1]:
             population_data.append(population)
             births_data.append(births)
             deaths_data.append(deaths)
-            births_d.append(births_data)
+           
     
             mean, std_dev, variance = compute_statistics(population_data)
             
