@@ -310,7 +310,7 @@ with col[1]:
                 st.write(f"Variância da População: {variance}")
                 #st.write(f"Total de Nascimento: {Totalidade}")
                 st.write(f"Total de Nascimento: {Total_Nascimentos}")
-                 st.write(f"Total de Mortes: {Total_Mortes}")
+                st.write(f"Total de Mortes: {Total_Mortes}")
             time.sleep(1)  # Esperar um segundo antes de atualizar novamente
     
         model = perform_regression(time_data, population_data)
