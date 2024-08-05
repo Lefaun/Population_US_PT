@@ -255,7 +255,7 @@ with col[1]:
         births_data = []
         deaths_data = []
         births_Total = []
-        Total = sum(births)
+        Total = sum(births_data)
     
         population = initial_population
         
