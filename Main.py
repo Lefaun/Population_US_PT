@@ -275,6 +275,7 @@ with col[1]:
                 kpi1.metric(label="População Atual", value=int(population))
                 kpi2.metric(label="Nascimentos no último segundo", value=int(births))
                 kpi3.metric(label="Mortes no último segundo", value=int(deaths))
+                kpi4.metric(label="Total Nacimentos", value=int(births_data))
     
                 # Dados em DataFrame
                 df = pd.DataFrame({
