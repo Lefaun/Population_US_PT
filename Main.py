@@ -271,7 +271,7 @@ with col[1]:
             
             with placeholder.container():
                 # KPIs
-                kpi1, kpi2, kpi3 = st.columns(3)
+                kpi1, kpi2, kpi3, kpi4 = st.columns(3)
                 kpi1.metric(label="População Atual", value=int(population))
                 kpi2.metric(label="Nascimentos no último segundo", value=int(births))
                 kpi3.metric(label="Mortes no último segundo", value=int(deaths))
