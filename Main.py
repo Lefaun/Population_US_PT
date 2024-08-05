@@ -281,7 +281,7 @@ with col[1]:
                 kpi1.metric(label="População Atual", value=int(population))
                 kpi2.metric(label="Nascimentos no último segundo", value=int(births))
                 kpi3.metric(label="Mortes no último segundo", value=int(deaths))
-            with placeholder.container():
+     
                 kpi4, kpi5 = st.columns(2)
                 kpi4.metric(label="Total Nascimentos", value=int(Total_Nascimentos))
                 kpi5.metric(label="Total Mortes", value=int(Total_Mortes))
