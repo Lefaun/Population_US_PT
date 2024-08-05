@@ -255,8 +255,7 @@ with col[1]:
         births_data = []
         deaths_data = []
         births_Total = []
-        Total = sum(births_data)
-    
+        
         population = initial_population
         
         placeholder = st.empty()
@@ -269,7 +268,7 @@ with col[1]:
             births_data.append(births)
             deaths_data.append(deaths)
             births_Total.append(birth_rate)           
-    
+            Total += birth_rate
             mean, std_dev, variance = compute_statistics(population_data)
             
             with placeholder.container():
