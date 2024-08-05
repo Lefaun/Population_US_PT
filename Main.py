@@ -267,8 +267,9 @@ with col[1]:
             population_data.append(population)
             births_data.append(births)
             deaths_data.append(deaths)
-            births_Total.append(birth_rate)           
-            Total += birth_rate
+            births_Total.append(birth_rate)
+            Total_Nacimentos = sum(births_Total)
+            Totalidade += birth_rate
             mean, std_dev, variance = compute_statistics(population_data)
             
             with placeholder.container():
@@ -277,7 +278,7 @@ with col[1]:
                 kpi1.metric(label="População Atual", value=int(population))
                 kpi2.metric(label="Nascimentos no último segundo", value=int(births))
                 kpi3.metric(label="Mortes no último segundo", value=int(deaths))
-                kpi4.metric(label="Total Nacimentos", value=int(Total))
+                kpi4.metric(label="Total Nacimentos", value=int(Totalidade))
     
                 # Dados em DataFrame
                 df = pd.DataFrame({
@@ -301,8 +302,8 @@ with col[1]:
                 st.write(f"Média da População: {mean}")
                 st.write(f"Desvio Padrão da População: {std_dev}")
                 st.write(f"Variância da População: {variance}")
-                st.write(f"Total de Nascimento: {Total}")
-    
+                st.write(f"Total de Nascimento: {Totalidade}")
+                st.write(f"Total de Nascimento: {Total_Nacimentos}")
             time.sleep(1)  # Esperar um segundo antes de atualizar novamente
     
         model = perform_regression(time_data, population_data)
